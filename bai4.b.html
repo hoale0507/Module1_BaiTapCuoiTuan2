@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4 - b</title>
+</head>
+<body>
+<!--b.	Nhập vào a và b, tính a^2, a^b-->
+<p id="display"></p>
+<input type="text" id="a">
+<input type="text" id="b">
+<button type="button" id="submit" onclick="cal()">Submit</button>
+<script>
+    function cal(){
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+        let square = Math.pow(a,2);
+        let exp = Math.pow(a,b);
+        document.getElementById("display").innerHTML = "Square is " + square + "; " + "Exp is " + exp;
+    }
+
+</script>
+
+</body>
+</html>

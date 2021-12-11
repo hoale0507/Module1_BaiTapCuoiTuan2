@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4-a</title>
+</head>
+<body>
+<!--a.	Nhập vào a, hiển thị ra chu vi và diện tích và hình vuông độ dài cạnh a-->
+
+<p id="result"></p>
+<input type="text" id="a">
+<button type="button" id="submit" onclick="display()">Submit</button>
+<script>
+    function display() {
+        let a = document.getElementById("a").value;
+        let p = a*4;
+        let s = a*a;
+        document.getElementById("result").innerHTML="Perimeter is " + p + " Square is "+s;
+    }
+
+
+</script>
+</body>
+</html>

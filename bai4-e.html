@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4 - e</title>
+</head>
+<body>
+<input type="text" id="a"/>
+<input type="text" id="b"/>
+<input type="text" id="c"/>
+<button type="button" id="submit" onclick="check()">Submit</button>
+<p id="result"></p>
+<script>
+    function check() {
+        let a = parseInt(document.getElementById("a").value);
+        let b = parseInt(document.getElementById("b").value);
+        let c = parseInt(document.getElementById("c").value);
+        let result;
+        if (a + b > c || b + c > a || a + c > b) {
+            if (a == b || b == c || c == a) {
+                if (a == b && c == a) {
+                    result = "là 3 cạnh của 1 tam giác đều"
+                } else {
+                    result = "là 3 cạnh của 1 tam giác cân"
+                }
+            } else {
+                result = "là 3 cạnh của 1 tam giác không phải là tam giác cân"
+            }
+
+        } else {
+            result = "không phải là 3 cạnh của 1 tam giác";
+        }
+        ;
+
+        if (a * a + b * b == c * c || c * c + b * b == a * a || a * a + c * c == b * b) {
+            result = "là 3 cạnh của 1 tam giác vuông";
+        };
+        document.getElementById("result").innerHTML = 'a, b, c ' + result;
+    }
+</script>
+</body>
+</html>
